@@ -24,6 +24,7 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+    exe.linkLibC();
     exe.linkSystemLibrary("raylib");
     exe.addIncludePath(std.Build.LazyPath.relative("lib/"));
 
