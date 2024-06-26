@@ -1,10 +1,9 @@
 const rl = @cImport({
-    @cDefine("RAYGUI_IMPLEMENTATION", {});
     @cInclude("raylib.h");
     @cInclude("raygui.h");
 });
 
-pub fn main() !void {
+pub fn main() void {
     rl.InitWindow(1280, 720, "yeet");
     defer rl.CloseWindow();
 
